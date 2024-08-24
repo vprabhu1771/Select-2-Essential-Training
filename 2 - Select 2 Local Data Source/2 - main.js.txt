@@ -1,0 +1,60 @@
+
+    var country = [
+        {
+            id: 0,
+            text: "India"
+        },
+        {
+            id: 1,
+            text: "USA"
+        },
+        {
+            id: 2,
+            text: "Russia"
+        },
+        {
+            id: 3,
+            text: "China"
+        },
+        {
+            id: 4,
+            text: "UK"
+        }
+    ];
+    
+    $('.prompt').select2({
+        data: country,
+        minimumInputLength: 2,
+        width: '100%',
+        multiple: true,
+        placeholder: "Enter Countrty Name",
+        templateResult: formatState
+    });
+
+    function formatState(data)
+    {
+        console.log(data);
+
+        str = "";
+        
+        str += "<p style='padding: 2px;'>" + data.text + "</p>";
+
+        var $state = $(str);
+
+        return $state;
+    }
+
+    function btn_handler()
+    {
+        var data = $('.prompt').select2('data');
+
+        console.log(data);
+        
+        console.log(data[0]);
+        
+        console.log(JSON.stringify(data[0].text));
+        
+        console.log(JSON.parse(JSON.stringify(data[0].text)));
+    }
+
+

@@ -1,0 +1,8 @@
+offical website
+
+https://select2.org/
+
+
+Linking JQuery Very Important
+
+1. Getting Started -> Installation 
